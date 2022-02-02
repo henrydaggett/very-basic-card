@@ -6,56 +6,38 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface VeryBasicCard {
+        "description": string;
+        "heading": string;
+        "img": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLVeryBasicCardElement extends Components.VeryBasicCard, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLVeryBasicCardElement: {
+        prototype: HTMLVeryBasicCardElement;
+        new (): HTMLVeryBasicCardElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "very-basic-card": HTMLVeryBasicCardElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface VeryBasicCard {
+        "description"?: string;
+        "heading"?: string;
+        "img"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "very-basic-card": VeryBasicCard;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "very-basic-card": LocalJSX.VeryBasicCard & JSXBase.HTMLAttributes<HTMLVeryBasicCardElement>;
         }
     }
 }

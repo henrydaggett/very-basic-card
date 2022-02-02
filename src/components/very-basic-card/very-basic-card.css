@@ -1,3 +1,24 @@
 :host {
   display: block;
+  border: 1px solid #00000020;
+  border-radius: 8px;
+  width: 320px;
+  font-family: -apple-system, sans-serif;
+}
+
+img {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+
+article {
+  padding: 24px;
+}
+
+h3 {
+  margin: 0 0 12px 0
+}
+
+p {
+  margin: 0;
 }

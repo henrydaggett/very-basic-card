@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'very-basic-card',
@@ -7,12 +7,20 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class VeryBasicCard {
 
+  @Prop({ mutable: true }) img: string = 'https://via.placeholder.com/320x150'
+
+  @Prop({ mutable: true }) heading: string = 'Heading'
+
+  @Prop({ mutable: true }) description: string = 'This is a short example description.'
+
   render() {
     return (
       <Host>
-        <img src="" alt="" />
-        <h3></h3>
-        <p></p>
+        <img src={this.img}/>
+        <article>
+          <h3>{this.heading}</h3>
+          <p>{this.description}</p>
+        </article>
       </Host>
     );
   }
