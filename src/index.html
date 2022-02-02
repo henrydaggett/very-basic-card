@@ -10,5 +10,10 @@
   </head>
   <body>
     <very-basic-card heading="Is this a heading?"></very-basic-card>
+
+    <script>
+      const card = document.getElementsByTagName('very-basic-card')[0]
+      card.setAttribute('description', 'Is this a description?')
+    </script>
   </body>
 </html>

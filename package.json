@@ -1,6 +1,6 @@
 {
   "name": "very-basic-card",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A VERY basic card web component",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -17,6 +17,12 @@
   "files": [
     "dist/",
     "loader/"
+  ],
+  "keywords": [
+    "Web component",
+    "StencilJS",
+    "HTML",
+    "Card"
   ],
   "scripts": {
     "build": "stencil build --docs",
